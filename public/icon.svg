@@ -1,14 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141c2a"/>
+      <stop offset="100%" stop-color="#0b0d14"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#d8ef00"/>
+      <stop offset="60%" stop-color="#bfdb00"/>
+      <stop offset="100%" stop-color="#96b000"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="22" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="rounded">
+      <rect width="512" height="512" rx="96"/>
+    </clipPath>
+    <pattern id="dots" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="24" cy="24" r="1.6" fill="#8aaedd" fill-opacity="0.045"/>
+    </pattern>
+  </defs>
+
   <!-- Background -->
-  <rect width="512" height="512" rx="96" fill="#0b0f17"/>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
 
-  <!-- Outer glow ring (subtle) -->
-  <rect width="512" height="512" rx="96" fill="none" stroke="#c8e600" stroke-width="6" opacity="0.18"/>
+  <!-- Subtle dot grid -->
+  <rect width="512" height="512" rx="96" fill="url(#dots)"/>
 
-  <!-- Lightning bolt — the BuildQuest mark -->
-  <!-- Main fill -->
-  <path d="M 310,50 L 170,265 L 250,265 L 200,462 L 342,247 L 262,247 Z" fill="#c8e600"/>
+  <!-- Subtle outer border -->
+  <rect width="512" height="512" rx="96" fill="none"
+        stroke="#bfdb00" stroke-width="5" opacity="0.14"/>
 
-  <!-- Bright core highlight (upper blade) -->
-  <path d="M 310,50 L 262,140 L 295,140 L 310,50 Z" fill="#e8ff50" opacity="0.6"/>
+  <!-- Glow bloom behind chevron -->
+  <path clip-path="url(#rounded)"
+        d="M 148,128 L 206,128 L 366,256 L 206,384 L 148,384 L 300,256 Z"
+        fill="#bfdb00" filter="url(#glow)" opacity="0.55"/>
+
+  <!-- Main chevron > -->
+  <path d="M 148,128 L 206,128 L 366,256 L 206,384 L 148,384 L 300,256 Z"
+        fill="url(#bolt)"/>
+
+  <!-- Highlight: upper blade leading edge -->
+  <path d="M 148,128 L 206,128 L 282,210 L 224,210 Z"
+        fill="#eeff60" opacity="0.42"/>
+
+  <!-- Small accent: bottom-blade trailing edge, very subtle -->
+  <path d="M 300,256 L 366,256 L 290,322 L 240,322 Z"
+        fill="#ffffff" opacity="0.06"/>
+
+  <!-- Corner pixel accents -->
+  <rect x="84" y="84"  width="22" height="22" rx="5" fill="#bfdb00" opacity="0.20"/>
+  <rect x="406" y="84"  width="22" height="22" rx="5" fill="#bfdb00" opacity="0.20"/>
+  <rect x="84" y="406" width="22" height="22" rx="5" fill="#bfdb00" opacity="0.20"/>
+  <rect x="406" y="406" width="22" height="22" rx="5" fill="#bfdb00" opacity="0.20"/>
 </svg>

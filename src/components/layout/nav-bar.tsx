@@ -87,9 +87,7 @@ export function DesktopNav() {
                     border-b border-border bg-background/97 backdrop-blur-md px-6 gap-0">
       {/* Logo */}
       <div className="flex items-center gap-2 mr-8 shrink-0">
-        <div className="w-7 h-7 rounded-sm bg-primary flex items-center justify-center shadow-[0_0_12px_hsl(73_96%_46%/0.4)]">
-          <span className="text-[10px] font-black text-primary-foreground tracking-tight select-none">BQ</span>
-        </div>
+        <img src="/icon.svg" alt="BuildQuest" className="w-7 h-7 rounded-sm shadow-[0_0_12px_color-mix(in_srgb,var(--primary)_40%,transparent)]" />
         <span className="text-[13px] font-bold text-foreground tracking-[0.06em] uppercase">
           BuildQuest
         </span>
