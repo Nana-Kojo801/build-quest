@@ -147,9 +147,7 @@ export default function QuestLogPage() {
 
               {/* Separator if both overdue and today have tasks */}
               {overdueTasks.length > 0 && todayTasks.length > 0 && (
-                <div className="mx-4">
-                  <div className="border-t border-border/60" />
-                </div>
+                <div className="border-t border-border/60" />
               )}
 
               {/* Today's tasks */}

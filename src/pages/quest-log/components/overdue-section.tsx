@@ -32,7 +32,7 @@ export function OverdueSection({ tasks, projects, onComplete, onSkip, onCarryAll
   }
 
   return (
-    <div className="mx-4">
+    <div>
       {/* Header toggle */}
       <button
         onClick={() => setOpen((p) => !p)}

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Sparkles, ChevronDown, X, Plus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { CATEGORIES, DIFFICULTIES } from '@/services/idea-generator'
+import { DIFFICULTIES } from '@/services/idea-generator'
 import type { Difficulty } from '@/lib/types'
 
 interface GeneratorControlsProps {
@@ -187,7 +187,7 @@ export function GeneratorControls({
               >
                 Any category
               </button>
-              {CATEGORIES.map((cat) => (
+              {Object.keys(CATEGORY_TECH_DEFAULTS).map((cat) => (
                 <button
                   key={cat}
                   onClick={() => { onCategoryChange(cat); setCategoryOpen(false) }}

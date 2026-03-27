@@ -47,7 +47,7 @@ export function DaySection({
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mx-4 mt-3 flex flex-col items-center gap-3 rounded-xl border border-dashed border-border bg-card/40 py-10"
+        className="mt-3 flex flex-col items-center gap-3 rounded-xl border border-dashed border-border bg-card/40 py-10"
       >
         <PartyPopper size={32} className="text-emerald-400 opacity-80" />
         <p className="text-sm font-semibold text-foreground">All caught up!</p>
@@ -61,7 +61,7 @@ export function DaySection({
   if (totalCount === 0) return null
 
   return (
-    <div className="mx-4">
+    <div>
       {/* Section header */}
       <div className="flex items-center gap-2 py-2">
         <span
