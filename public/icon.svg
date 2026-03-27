@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#0b0f17"/>
+
+  <!-- Outer glow ring (subtle) -->
+  <rect width="512" height="512" rx="96" fill="none" stroke="#c8e600" stroke-width="6" opacity="0.18"/>
+
+  <!-- Lightning bolt — the BuildQuest mark -->
+  <!-- Main fill -->
+  <path d="M 310,50 L 170,265 L 250,265 L 200,462 L 342,247 L 262,247 Z" fill="#c8e600"/>
+
+  <!-- Bright core highlight (upper blade) -->
+  <path d="M 310,50 L 262,140 L 295,140 L 310,50 Z" fill="#e8ff50" opacity="0.6"/>
+</svg>
