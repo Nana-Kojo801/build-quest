@@ -49,7 +49,7 @@ function HubSkeleton() {
 export default function QuestHubPage() {
   const navigate = useNavigate()
 
-  const { projects, progress, settings, loadProjects, loadProgress, loadSettings, loadIdeas } =
+  const { projects, progress, loadProjects, loadProgress, loadSettings, loadIdeas } =
     useProjectStore()
   const { tasks, loadTasks, completeTask, uncompleteTask, getTodayTasks } = useTaskStore()
   const { addToast } = useUIStore()

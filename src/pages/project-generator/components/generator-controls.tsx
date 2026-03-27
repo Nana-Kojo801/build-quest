@@ -1,4 +1,4 @@
-import { useState, useRef, KeyboardEvent } from 'react'
+import { useState, useRef, type KeyboardEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Sparkles, ChevronDown, X, Plus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
